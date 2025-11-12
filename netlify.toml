@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 [build]
   publish = "."
   command = ""
 
 [context.production.environment]
 # Add environment variables here if needed
+=======
+[build]
+  publish = "."
+  command = ""
+
+[context.production.environment]
+# Add environment variables here if needed
+>>>>>>> aae00d401cf1e1650264f8016ce864d1d5c141e4
