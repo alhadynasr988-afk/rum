@@ -168,3 +168,353 @@ footer {
         border-radius: 8px;
     }
 }
+
+/*    RESPONSIVE STYLES     */
+/* ======================== */
+
+/* الهواتف الصغيرة (أقل من 576px) */
+@media (max-width: 575.98px) {
+    header {
+        padding: 15px 0;
+    }
+
+    header h2 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav a {
+        margin: 0 8px;
+        font-size: 0.9rem;
+        padding: 5px 10px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+    }
+
+    .hero {
+        padding: 40px 15px;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+
+    .container {
+        padding: 15px 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item {
+        width: 100%;
+        max-width: 300px;
+        margin: 8px 0;
+    }
+
+    .video-section h2 {
+        font-size: 1.4rem;
+    }
+
+    .video-description {
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+}
+
+/* الهواتف الكبيرة (من 576px إلى 767px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .container {
+        justify-content: space-around;
+    }
+
+    .item {
+        width: calc(50% - 20px);
+    }
+
+    nav a {
+        margin: 0 10px;
+        font-size: 0.95rem;
+    }
+}
+
+/* الأجهزة اللوحية (من 768px إلى 991px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .container {
+        justify-content: space-around;
+    }
+
+    .item {
+        width: calc(33.333% - 20px);
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+}
+
+/* تحسينات عامة للتجاوب */
+html {
+    font-size: 16px;
+}
+
+body {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* تحسينات القائمة */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* تحسينات النصوص */
+h1 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+h2 {
+    font-size: clamp(1.3rem, 3vw, 2rem);
+}
+
+/* تحسينات الأزرار */
+.btn-contact {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    padding: 10px 20px;
+    width: 100%;
+    max-width: 200px;
+}
+
+/* تحسينات الفيديو */
+.video-container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* تحسينات الهيدر */
+header {
+    position: relative;
+}
+
+/* منع التمرير الأفقي */
+body {
+    overflow-x: hidden;
+}
+
+/* تحسينات الفقرات */
+p {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    margin: 10px 0;
+}
+
+/* تحسينات خاصة للشاشات الكبيرة جداً */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+
+    section {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+/* تحسينات للشاشات الصغيرة جداً (أقل من 360px) */
+@media (max-width: 359.98px) {
+    nav a {
+        font-size: 0.8rem;
+        margin: 0 5px;
+        padding: 4px 8px;
+    }
+
+    .hero h1 {
+        font-size: 1.3rem;
+    }
+
+    .item {
+        margin: 5px 0;
+        padding: 10px;
+    }
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+}
+
+.logo-img {
+    width: 50px;
+    height: auto;
+}
+
+.site-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #f6f7f9;
+    margin: 0;
+}
+
+.logo-img {
+    width: clamp(40px, 5vw, 80px);
+    height: auto;
+}
+
+.video-container {
+    width: 100%;
+    max-width: 400px;
+    /* حجم الفيديو على الشاشات الكبيرة */
+    aspect-ratio: 1 / 1;
+    /* يجعل الفيديو مربع الشكل */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* يملأ الفيديو داخل المربع بدون تشويه */
+}
+
+/* تنسيق عام للأقسام */
+.about-us,
+.vision-values {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    /* خلفية فاتحة */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Tahoma", Arial, sans-serif;
+    line-height: 1.8;
+}
+
+/* العناوين */
+.about-us h2,
+.vision-values h2 {
+    font-size: 28px;
+    color: #1a73e8;
+    /* أزرق احترافي */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* الفقرات */
+.about-us p,
+.vision-values p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* زر الدعوة للتواصل */
+.cta-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #1a73e8;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+    background: #0c5fd6;
+}
+
+/* قائمة القيم */
+.vision-values ul {
+    list-style: none;
+    padding: 0;
+}
+
+.vision-values ul li {
+    background: #fff;
+    margin: 10px 0;
+    padding: 12px;
+    border-left: 5px solid #1a73e8;
+    border-radius: 6px;
+    font-size: 15px;
+    color: #444;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    color: #fff;
+}
+
+/* زر الاتصال */
+.call-btn {
+    background: #1a73e8;
+    /* أزرق */
+}
+
+.call-btn:hover {
+    background: #0c5fd6;
+}
+
+/* زر الواتساب */
+.whatsapp-btn {
+    background: #25D366;
+    /* أخضر واتساب */
+}
+
+.whatsapp-btn:hover {
+    background: #1ebe5d;
+}
+
+/* ✅ تجاوب الهواتف */
+@media (max-width: 768px) {
+    .contact-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
